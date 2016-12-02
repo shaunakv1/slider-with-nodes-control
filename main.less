@@ -12,8 +12,30 @@
 }
 
 .noUi-vertical {
+  
   .noUi-tooltip {
-  	transform: translate(200%, -50%);
-    top: 50%;
+  	transform: none;
+    top: -14.5px;
+    right: -108px;
+    border-radius: 0;
+    border-left: none;
+    width: 80px;
+  }
+
+  //position
+  .noUi-handle {
+  	left: 30px;
+  	top: -17px;
+
+  	width: 0;
+  	height: 0;
+  	border-style: solid;
+  	border-width: 16px 28px 16px 0;
+  	border-color: transparent #D9D9D9 transparent transparent;
+  	background: transparent;
+  	box-shadow: none;
+  	&:before,&:after{
+  	    display:none;
+  	}
   }
 }
