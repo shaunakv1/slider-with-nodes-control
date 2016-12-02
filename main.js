@@ -5,6 +5,7 @@ $(function () {
 				step:1,
 				orientation: "vertical",
 				direction: 'rtl',
+				tooltips: true,
 				range: {
 					'min': 0,
 					'max': 100
