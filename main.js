@@ -25,24 +25,20 @@ $(function () {
 		    .attr("width", '100%')
 		    .attr("height", '100%')
 		    .attr('viewBox','0 0 '+Math.min(chartWidth,chartHeight)+' '+Math.min(chartWidth,chartHeight))
-		    .attr('preserveAspectRatio','xMinYMin')
-		    .append("g")
-		    .attr("transform", "translate(" + Math.min(chartWidth,chartHeight) / 2 + "," + Math.min(chartWidth,chartHeight) / 2 + ")");
+		    .attr('preserveAspectRatio','xMinYMin');
 
-		/*var curveData = [ {x:190,y:100},{x:360,  y:150}];
+		var lineData = [ {x:0,y:0},{x:200,y:450},{x:chartWidth,  y:chartHeight}];
 		
-		var diagonal = d3.svg.diagonal()
-		    .source(function(d) {return {"x":d[0].y, "y":d[0].x}; })            
-		    .target(function(d) {return {"x":d[1].y, "y":d[1].x}; })
-		    .projection(function(d) { return [d.y, d.x]; });
+		var line = d3.line()
+		    .x(function(d) { return d.x; })
+		    .y(function(d) { return d.y; })
+		    .curve(d3.curveBundle.beta(0));
 
 		var line = svg.append('g')		
-		    .datum(curveData)
+		    .datum(lineData)
 		    .append("path")
-		    .attr("class", "link")
-		    .attr("d", diagonal)
-		    .attr("stroke", "#444")
-		    .attr("stroke-width", 2)
-		    .attr("fill", "none");*/
+		    .attr("d", line)
+		    .attr("stroke", "red")
+		    .attr("stroke-width", 1);
 
 });
